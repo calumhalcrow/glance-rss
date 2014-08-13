@@ -1,7 +1,12 @@
-<h1>{{title}}</h1>
-<p>{{url}}</p>
-<ul>
-{{#each items}}
-  <li><a href="{{link}}">{{title}}</a><br>{{description}}</li>
-{{/each}}
-</ul>
+<div class="header">
+  <h1>{{title}}</h1>
+  <h2>{{url}}</h2>
+</div>
+
+<div class="content">
+  <ul>
+  {{#each items}}
+    <li><a href="{{link}}">{{title}}</a><br>{{description}}</li>
+  {{/each}}
+  </ul>
+</div>

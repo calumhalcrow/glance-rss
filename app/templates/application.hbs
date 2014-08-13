@@ -1,9 +1,26 @@
-<h2 id='title'>Glance RSS</h2>
-<p>{{#link-to 'index'}}Home{{/link-to}} | {{#link-to 'about'}}About{{/link-to}}
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
 
-<ul>
-{{#each}}
-  <li>{{#link-to 'channel' this}}{{title}}{{/link-to}}</li>
-{{/each}}
-</ul>
-{{outlet}}
+    <div id="menu">
+        <div class="pure-menu pure-menu-open">
+           {{#link-to 'index' classNames="pure-menu-heading"}}Glance RSS{{/link-to}}
+              <ul>
+                <li>{{#link-to 'about'}}About{{/link-to}}</li>
+              {{#each}}
+                <li>{{#link-to 'channel' this}}{{title}}{{/link-to}}</li>
+              {{/each}}
+                <!--<li class="menu-item-divided pure-menu-selected">-->
+                    <!--<a href="#">Services</a>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+      {{outlet}}
+    </div>
+</div>

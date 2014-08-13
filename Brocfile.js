@@ -17,4 +17,7 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
+app.import('vendor/pure/pure-min.css');
+app.import('vendor/pure/grids-responsive-min.css');
+
 module.exports = app.toTree();
