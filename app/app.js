@@ -9,6 +9,13 @@ var App = Ember.Application.extend({
   Resolver: Resolver
 });
 
+//App.Store = DS.Store.extend({
+  //revision: 12
+//});
+
+
+    //{ id: "1", url: 'http://example.com/foo/rss' },
+
 loadInitializers(App, 'glance-rss');
 
 export default App;
